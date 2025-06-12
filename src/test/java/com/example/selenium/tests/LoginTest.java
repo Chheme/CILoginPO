@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
+import com.example.selenium.POs.BasePagePO;
 import com.example.selenium.POs.LoginFormPO;
 import com.example.selenium.POs.LoginSuccessPO;
 
@@ -29,8 +30,11 @@ public class LoginTest extends DriverLifeCycleSetting
     @Test
     public void testLoginNoOK(){
         login = new LoginFormPO(driver);
-        login.with("user", "error");
-        assertTrue(login.invalidBoxIsPresent());
+    BasePagePO result = login.with("user", "user");
+
+    assertTrue(result instanceof LoginSuccessPO);
+    loginSuccess = (LoginSuccessPO) result;
+    assertTrue(loginSuccess.successBoxIsPresent());
     }
 
     @Test
