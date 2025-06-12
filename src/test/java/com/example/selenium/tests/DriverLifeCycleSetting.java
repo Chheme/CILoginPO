@@ -14,7 +14,7 @@ public class DriverLifeCycleSetting {
 
     @BeforeAll
     public static void beforeAll(){
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\cheme\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\cheme\\chromedriver.exe");
     }
 
     @BeforeEach
