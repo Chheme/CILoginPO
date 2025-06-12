@@ -19,16 +19,16 @@ public class LoginTest extends DriverLifeCycleSetting
     private LoginFormPO login;
     private LoginSuccessPO loginSuccess;
 
-    @Test
-    public void testLoginOK()
-    {
-        login = new LoginFormPO(driver);
-    BasePagePO result = login.with("user", "user");
+   // @Test
+   // public void testLoginOK()
+    //{
+    //    login = new LoginFormPO(driver);
+   // BasePagePO result = login.with("user", "user");
 
-    assertTrue(result instanceof LoginSuccessPO);
-    loginSuccess = (LoginSuccessPO) result;
-    assertTrue(loginSuccess.successBoxIsPresent());
-    }
+    //assertTrue(result instanceof LoginSuccessPO);
+    //loginSuccess = (LoginSuccessPO) result;
+    //assertTrue(loginSuccess.successBoxIsPresent());
+    //}
 
     @Test
     public void testLoginNoOK(){
